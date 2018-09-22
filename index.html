@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8" />
+    <title>The Psychic Gamee</title>
+    <link rel="stylesheet" type="text/css" href="../Word-Guess-Game/assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../Word-Guess-Game/assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../Word-Guess-Game/assets/css/style.css">
+    </head>
+    <body>
+    
+        <div class="row">
+            <div class="col-md-12 header">
+                <header class="main-header">
+                    <h1>The Psychic Game</h1>
+                    <h1>Guess what letter I am thinking of</h1>
+                </header>
+            </div>
+        </div>  
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="Psychic">
+                    <img src="../Word-Guess-Game/assets/images/AreyouPsychic.jpg" alt="Psychic" id="Psychic">
+                </div>    
+            </div>
+
+            <div class="col-md-4 ">
+                    <header class="game-inst">
+                        <!-- <h1>Guess what letter I am thinking of</h1> -->
+                        <h3>Try to guess the letter The Eye  has picked. Any letter from A - Z</h3>
+                    </header>
+            </div>    
+          
+            <div class="col-md-4 ">
+                    <!-- <ul id="space" class="list-group">
+                        <li class="list-group-item" id="wins">Wins:</li>
+                        <li class="list-group-item" id="lose">Losses:</li>
+                        <li class="list-group-item" id="guessesLeft">Guesses Left:</li>
+                        <li class="list-group-item" id="letter">Your Guesses...:</li>
+                    </ul> -->
+                    <table class="table table-dark">
+                            <tr>
+                                <td>Wins:</td>
+                                <td id="winstable"></td>
+                            </tr>
+                            <tr>
+                                <td>Losses:</td>
+                                <td id="losetable"></td>
+                            </tr>    
+                            <tr>
+                                <td>Guesses Left:</td>
+                                <td id="guessesLefttable"></td>
+                            </tr>     
+                            <tr>
+                                <td>Your Guesses...:</td>
+                                <td id="lettertable"></td>
+                            </tr>                                                      
+                        </table>
+
+
+                </div>                
+
+
+        </div>   
+
+
+        </div> 
+        <!-- <ul id="space" class="list-group">
+                <li class="list-group-item" id="wins">Wins:</li>
+                <li class="list-group-item" id="lose">Losses:</li>
+                <li class="list-group-item" id="guessesLeft">Guesses Left:</li>
+                <li class="list-group-item" id="letter">Your Guesses...:</li>
+            </ul> -->
+        <div class="row">
+            <div class="col-md-12 header">
+                <footer class="footer">
+                    <h1> &copy;Copyright 2018 Julio Hofmann</h1>
+                </footer>
+            </div>
+        </div> 
+
+
+    <!-- <script type="text/javascript">
+
+    //  letters to be used
+    var eyeChoices = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+
+    // zeroing
+    var wins = 0;
+    var losses = 0;
+    var guessesLeft = 9;
+    var letterUser = [];
+
+    //  random choice from the eyeChoices array.
+    var eyeGuess = eyeChoices[Math.floor(Math.random() * eyeChoices.length)];
+    console.log(eyeGuess);
+
+    function countGuessesLeft() {
+        // document.querySelector("#guessesLeft").innerHTML = "Guesses Left: " + guessesLeft;
+        console.log(guessesLeft);
+
+    var elGuessesLeft = document.getElementById('guessesLefttable');
+    elGuessesLeft.textContent = guessesLeft        
+    }
+
+    function farUserGuesses() {
+    // document.querySelector("#letter").innerHTML = "Your Guesses...: " + letterUser.join('');
+
+     //get the element thas has an id of lettertable
+     var el = document.getElementById('lettertable')
+    // replace the content of that element with the new value
+    el.textContent = letterUser;   
+    
+
+}
+
+countGuessesLeft();
+
+var restart = function() {
+	guessesLeft = 9;
+	letterUser = [];
+}
+
+// When the user presses a key, it will run the following function..
+document.onkeyup = function(event) {
+	guessesLeft--;
+
+	var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+
+	letterUser.push(userGuess);
+	countGuessesLeft();
+	farUserGuesses();
+
+	if (userGuess === eyeGuess){
+		wins++;
+		// document.querySelector("#wins").innerHTML = "Wins: " + wins;
+        
+        var elwinstable = document.getElementById('winstable');
+        elwinstable.textContent = wins;
+        
+        restart();
+        
+
+	} 
+	else if (guessesLeft === 0) {
+		losses++;
+        // document.querySelector("#lose").innerHTML = "Loses: " + losses;
+        
+        var ellosetable = document.getElementById('losetable');
+        ellosetable.textContent = losses;        
+        
+        restart();
+        
+    }
+    
+
+
+
+
+
+  };        
+
+
+
+
+
+
+    </script>
+         -->
+      
+
+
+<!-- Javascript game.js -->
+<!-- <script type="text/javascript" src="assets/javascript/game.js"></script> -->
+
+<script src='../Word-Guess-Game/assets/javascript/game.js'></script>
+    </body>
+</html>
+
+
